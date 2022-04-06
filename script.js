@@ -1,14 +1,19 @@
-let hr = document.querySelector('#hr')
-let mn = document.querySelector('#mn')
-let sc = document.querySelector('#sc')
+const hr = document.querySelector('#hr')
+const mn = document.querySelector('#mn')
+const sc = document.querySelector('#sc')
 
 // Digital clock
-let hours = document.querySelector('#hours')
-let minutes = document.querySelector('#minutes')
-let seconds = document.querySelector('#seconds')
-let ampm = document.querySelector('#ampm')
+const hours = document.querySelector('#hours')
+const minutes = document.querySelector('#minutes')
+const seconds = document.querySelector('#seconds')
+const ampm = document.querySelector('#ampm')
+
+// Audio
+const sound = document.querySelector('#sound')
 
 setInterval(() => {
+  sound.play()
+
   let day = new Date()
 
   let h = day.getHours()
