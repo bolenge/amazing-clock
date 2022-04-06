@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Amazing Clock</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="container">
       <div class="clock">
 
-        <div class="circle" style="--clr: #04fc43;"><em></em></div>
-        <div class="circle circle2" style="--clr: #fee800;"><em></em></div>
-        <div class="circle circle3" style="--clr: #ff2972;"><em></em></div>
+        <div id="sc" class="circle" style="--clr: #04fc43;"><em></em></div>
+        <div id="mn" class="circle circle2" style="--clr: #fee800;"><em></em></div>
+        <div id="hr" class="circle circle3" style="--clr: #ff2972;"><em></em></div>
 
         <span style="--i:1"><strong>1</strong></span>
         <span style="--i:2"><strong>2</strong></span>
@@ -28,6 +28,16 @@
         <span style="--i:11"><strong>11</strong></span>
         <span style="--i:12"><strong>12</strong></span>
       </div>
+
+      <!-- Digital clock -->
+      <div id="time">
+        <div id="hours" style="--clr: #ff2972;">00</div>
+        <div id="minutes" style="--clr: #fee800;">00</div>
+        <div id="seconds" style="--clr: #04fc43;">00</div>
+        <div id="ampm">AM</div>
+      </div>
     </div>
+
+    <script src="script.js"></script>
   </body>
 </html>
