@@ -27,10 +27,11 @@ body {
   justify-content: center;
   align-items: center;
   margin-bottom: 30px;
+  flex-direction: column;
   box-shadow: 25px 25px 75px rgba(0, 0, 0, 0.75),
               10px 10px 70px rgba(0, 0, 0, 0.25),
               inset 5px 5px 10px rgba(0, 0, 0, 0.5),
-              inset 5px 5px 20px rgba(0, 0, 0, 0.2),
+              inset 5px 5px 20px rgba(255, 255, 255, 0.2),
               inset -5px -5px 15px rgba(0, 0, 0, 0.75);
 }
 
@@ -43,9 +44,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 30px;
   box-shadow: 10px 50px 70px rgba(0, 0, 0, 0.25),
               inset 5px 5px 10px rgba(0, 0, 0, 0.5),
-              inset 5px 5px 20px rgba(0, 0, 0, 0.2),
+              inset 5px 5px 20px rgba(255, 255, 255, 0.2),
               inset -5px -5px 15px rgba(0, 0, 0, 0.75);
 }
 
@@ -127,4 +129,54 @@ body {
   width: 180px;
   height: 180px;
   z-index: 8;
+}
+
+/* Digital clock style */
+#time {
+  margin-bottom: 40px;
+  display: flex;
+  padding: 10px 20px;
+  font-size: 2em;
+  font-weight: 600;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  border-radius: 40px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5),
+              inset 5px 5px 20px rgba(255, 255, 255, 0.2),
+              inset -5px -5px 15px rgba(0, 0, 0, 0.75);
+}
+
+#time div {
+  position: relative;
+  width: 60px;
+  text-align: center;
+  font-weight: 500;
+  color: var(--clr);
+}
+
+#time div:nth-child(1)::after,
+#time div:nth-child(2)::after {
+  content: ':';
+  position: absolute;
+  right: -4px;
+}
+
+#time div:last-child {
+  font-size: 0.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+#time div:nth-child(2)::after {
+  animation: animate 1s steps(1) infinite;
+}
+
+@keyframes animate {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
 }
